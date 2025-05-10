@@ -22,6 +22,14 @@ class Guitar(Musical_Instrument):
     
     def tune(self):
         print(f"Tuning {self.name}")
+
+class Piano(Musical_Instrument):
+    
+    def play_sound(self):
+        print(f"{self.name} is playing a melodious tune.")
+    
+    def tune(self):
+        print(f"Tuning {self.name}")
     
 guitar = Guitar("Electric Guitar", "String", "Yamaha")
 

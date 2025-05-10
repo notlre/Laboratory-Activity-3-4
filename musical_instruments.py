@@ -26,3 +26,5 @@ class Guitar(Musical_Instrument):
 guitar = Guitar("Electric Guitar", "String", "Yamaha")
 
 guitar.play_sound()
+
+print("test")

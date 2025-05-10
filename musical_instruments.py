@@ -44,3 +44,16 @@ class Piano(Musical_Instrument):
         print(f"Tuning {self.name}")
 
 
+
+class Flute(Musical_Instrument):
+
+    def play_sound(self):
+        print(f"{self.name} is producing a soft, airy sound.")
+
+    def tune(self):
+        print(f"Tuning {self.name}")
+
+flute = Flute("Concert Flute", "Woodwind", "Yamaha")
+
+flute.play_sound()
+flute.tune()

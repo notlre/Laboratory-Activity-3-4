@@ -2,35 +2,6 @@ from abc import ABC, abstractmethod
 import random
 
 # Abstract Base Class (Parent)
-"""
-class Musical_Instrument:
-    def __init__(self, name, instrument_type, brand):
-        self.name = name
-        self.instrument_type = instrument_type
-        self.brand = brand
-
-    @abstractmethod
-    def play_sound(self):
-        pass
-    
-    @abstractmethod
-    def tune(self):
-        pass
-
-# Child Class
-class Guitar(Musical_Instrument):
-    
-    def play_sound(self):
-        print(f"{self.name} is strumming nonchalantly.")
-    
-    def tune(self):
-        print(f"Tuning {self.name}")
-    
-guitar = Guitar("Electric Guitar", "String", "Yamaha")
-
-guitar.play_sound()
-"""
-
 class Musical_Instrument:
 
     def __init__(self, name, type):
@@ -57,7 +28,7 @@ class Musical_Instrument:
     def description(self):
         pass
     
-
+# Child Class
 class Guitar(Musical_Instrument):
     def __init__(self, name = "Marcin the Guitar", type = "null"):
         super().__init__(name, type)
@@ -82,7 +53,7 @@ class Guitar(Musical_Instrument):
         if self._type == "acoustic":
             return f"{self.name} stays steadily as you tune its 6 strings."
         elif self._type == "electric":
-            return f"{self.name} flails everywhere as you tune its 6 strings."
+            return f"{self.name} flails as you tune its 6 strings."
     
     def description(self):
         if self._type == "acoustic":

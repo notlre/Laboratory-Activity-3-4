@@ -29,4 +29,5 @@ guitar.play_sound()
 
 guitar.tune()
 
+print(f"Name: {guitar.name}")
 

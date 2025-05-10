@@ -29,11 +29,6 @@ guitar.play_sound()
 
 guitar.tune()
 
-
-
-
-
-
 # Child Class
 class Piano(Musical_Instrument):
     
@@ -42,5 +37,23 @@ class Piano(Musical_Instrument):
     
     def tune(self):
         print(f"Tuning {self.name}")
+
+#Child Class
+class Violin(Musical_Instrument):
+    def __init__(self, name, instrument_type, brand):
+        super().__init__(name, instrument_type, brand)
+        self.bow_type = "Standard"
+
+    def play_sound(self):
+        print(f"{self.name} is playing a soft classical melody.")
+
+    def tune(self):
+        print(f"Tuning the strings of {self.name}")
+        
+violin = Violin("Acoustic Violin", "String", "Stentor")
+
+violin.play_sound()
+
+violin.tune()
 
 

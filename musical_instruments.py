@@ -30,3 +30,17 @@ guitar.play_sound()
 guitar.tune()
 
 
+
+
+
+
+# Child Class
+class Piano(Musical_Instrument):
+    
+    def play_sound(self):
+        print(f"{self.name} is playing a melodious tune.")
+    
+    def tune(self):
+        print(f"Tuning {self.name}")
+
+

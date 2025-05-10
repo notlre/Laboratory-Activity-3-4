@@ -27,4 +27,6 @@ guitar = Guitar("Electric Guitar", "String", "Yamaha")
 
 guitar.play_sound()
 
-print("test")
+guitar.tune()
+
+

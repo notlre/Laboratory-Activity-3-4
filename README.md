@@ -15,10 +15,10 @@
        🎻 Violin
        🎺 Flute
        🎸 Ukelele
-    Each is represented as a class that inherits from the abstract base class **Musical_Instrument**. Showcasing OOP principles like abstraction, inheritance, and polymorphism.
-        Abstraction - **Musical_Instrument** defines the required methods, but does not implement them.
-        Inheritance - **Guitar**, **Violin**, **Flute**, and **Ukelele** inherit from **Musical_Instrument**.
-        Polymorphism - Each instrument class has its own behavior for **play()**, **tune()**, and **description()**
+    Each is represented as a class that inherits from the abstract base class **Musical_Instrument**. This project demostrates key OOP principles such as abstraction, inheritance, and polymorphism:
+        Abstraction - The **Musical_Instrument** class defines the required methods, but does not implement them, allowing for flexibility in how each instrument behaves.
+        Inheritance - The **Guitar**, **Violin**, **Flute**, and **Ukelele** classes inherit from **Musical_Instrument**, enabling them to share common functionality while having their own specific implementations.
+        Polymorphism - Each instrument class has its own behavior for **play()**, **tune()**, and **description()**.
         
 💻 How to run the program:
     1. Choose any instrument out of the 4 available instruments:

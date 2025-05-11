@@ -1,40 +1,80 @@
-# Laboratory-Activity-3-4
+# 🎶 Musical Instruments – OOP Project
 
-🎶 Project Title: Musical Instruments
+## 👥 Team Members
+- **Jervis Apuntar** 🎻  
+- **Shanea May B. Aniñon** 🎺  
+- **Zaireh C. Macatangay** 🎸  
+- **Aldrin L. Piñero** 🎸  
 
-👥 Team Members:
-    🎻 Apuntar, Jervis
-    🎺 Aniñon, Shanea May B.
-    🎸 Macatangay, Zaireh C.
-    🎸 Piñero, Aldrin L.
+---
+
+## 🧩 Overview
+
+This is a simple **Object-Oriented Programming** project that demonstrates key OOP principles by modeling various musical instruments. Each instrument has a unique personality and behavior, implemented through:
+
+- **Abstraction** – The abstract class `Musical_Instrument` defines the blueprint for all instruments.
+- **Inheritance** – Instruments such as `Guitar`, `Violin`, `Flute`, and `Ukulele` inherit from the base class.
+- **Polymorphism** – Each subclass provides its own implementation of methods like `play()`, `tune()`, and `description()`.
+
+---
+
+## 🎼 Instruments Available
+- 🎸 **Marcin (Guitar)** – Choose a personality: *Acoustic*, *Electric*, or *Neither*
+- 🎻 **Violin** – Provide a name and brand
+- 🎺 **Flute** – Set name, material (*default: silver*), and key (*default: C*)
+- 🎸 **Ukulele** – Customize with name, brand, and size (*default: soprano*)
+
+---
+
+## 💻 How to Run
+
+1. **Clone this repository**  
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+
+2. **Run the program**  
+   Make sure Python is installed. Then run:
+   ```bash
+   python main.py
+   ```
+
+3. **Interact with your instrument**  
+   - `Introduce` – Hear its intro  
+   - `Play` – Listen to its unique tune  
+   - `Tune` – Simulate tuning it  
+   - `Stop` – End the interaction  
+
+4. **Explore more instruments or exit** when you're done.
+
+---
+
+## 📝 Acknowledgements
+
+This project was developed for the **Advanced Computer Programming** course.  
+We sincerely thank our professor for guiding us in mastering OOP principles, and acknowledge the contribution and collaboration of every team member.
+
+---
+
+## 📁 Repository Structure
+```bash
+.
+├── main.py                 # Main program file
+├── musical_instruments.py # (If split into module) Instrument class definitions
+├── README.md               # This file
+└── UML.puml / diagram.png  # UML Class Diagram (if applicable)
+```
+
+---
+
+## ✅ Features Demonstrated
+- Abstract base classes
+- Inheritance hierarchy
+- Dynamic behavior (random choices)
+- Console-based interactivity
+- Encapsulation with properties
 
 
- 🧩 System Overview:
-    This is a simple Object-Oriented Programming project that shows 4 different musical instruments and their types as well as their personalities:
-       🎸 Marcin (Guitar)
-       🎻 Violin
-       🎺 Flute
-       🎸 Ukelele
-    Each is represented as a class that inherits from the abstract base class **Musical_Instrument**. This project demostrates key OOP principles such as abstraction, inheritance, and polymorphism:
-        Abstraction - The **Musical_Instrument** class defines the required methods, but does not implement them, allowing for flexibility in how each instrument behaves.
-        Inheritance - The **Guitar**, **Violin**, **Flute**, and **Ukelele** classes inherit from **Musical_Instrument**, enabling them to share common functionality while having their own specific implementations.
-        Polymorphism - Each instrument class has its own behavior for **play()**, **tune()**, and **description()**.
-        
-💻 How to run the program:
-    1. Choose any instrument out of the 4 available instruments:
-        🎸 Marcin (Guitar): Choose a brand and his personality (Acoustic/Electric/Neither)
-        🎻 Violin: Enter its name and brand
-        🎺 Flute: Provide its name, material (optional), and key (optional)
-        🎸 Ukelele: Name it, choose brand and size (optional)
-    2. Interact with your instrument:
-        Introduce: Hear its intro
-        Play: Listen to its unique tune
-        Tune: Simulate tuning it
-        Stop: End the interaction
-    3. Go back to explore other instrument or exit when ready.
-
-Acknowledgement:
-    This OOP project was created as part of our Advanced Computer Programming course. We thank our professor for the guidance and
-for helping us understand the key OOP concepts. Special thanks to our team members for their cooperation and their effort for the project. 
 
 

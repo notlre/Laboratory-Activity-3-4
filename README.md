@@ -20,7 +20,7 @@ How to run:
         2.2 The other three instruments gives you an option to name your instrument and other details.
     3. You can now choose what function to use; introduce, tune, play, and stop.
 
-Acknowledgement
+Acknowledgement:
     This OOP project was created as part of our Advanced Computer Programming course. We thank our professor for the guidance and
 for helping us understand the key OOP concepts. Special thanks to our team members for their cooperation and their effort for the project. 
 

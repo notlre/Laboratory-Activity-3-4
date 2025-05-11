@@ -134,22 +134,6 @@ class Ukulele(Musical_Instrument):
             f"crafted by {self.brand}. I'm part of the {self.instrument_type} group!"
         )
 
-    def joke(self):
-        jokes = [
-            "Why did the ukulele bring sunscreen? Because it’s always in a sunny mood!",
-            "How do you make a band instantly happier? Add a ukulele!",
-            "Why did the ukulele get promoted? It always hits the right note!"
-        ]
-        return f"{self.name} giggles and says: \"{random.choice(jokes)}\""
-
-    def vibe(self):
-        vibes = [
-            "You're chillin' on a hammock, sipping coconut juice...",
-            "A summer breeze flows by as I strum gently...",
-            "Close your eyes... feel the island rhythm, yeah?"
-        ]
-        return f"{self.name} says: \"{random.choice(vibes)}\""
-
     
 
 #Menu System

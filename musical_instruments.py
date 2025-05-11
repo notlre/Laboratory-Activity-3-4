@@ -28,7 +28,7 @@ class Musical_Instrument:
     def description(self):
         pass
     
-# Child Class
+
 class Guitar(Musical_Instrument):
     def __init__(self, name = "Marcin the Guitar", type = "null"):
         super().__init__(name, type)
@@ -53,7 +53,7 @@ class Guitar(Musical_Instrument):
         if self._type == "acoustic":
             return f"{self.name} stays steadily as you tune its 6 strings."
         elif self._type == "electric":
-            return f"{self.name} flails as you tune its 6 strings."
+            return f"{self.name} flails everywhere as you tune its 6 strings."
     
     def description(self):
         if self._type == "acoustic":

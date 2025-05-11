@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 import random
+import os
 
 # Abstract Base Class
 class Musical_Instrument(ABC):
@@ -103,7 +104,6 @@ class Guitar(Musical_Instrument):
             return f"{self.name} seems confused about its personality."
 
 
-
 class Ukulele(Musical_Instrument):
     def __init__(self, name, instrument_type="chordophone", brand="Generic", size="soprano", origin="Hawaii"):
         super().__init__(name, instrument_type, brand)
@@ -131,8 +131,7 @@ class Ukulele(Musical_Instrument):
     def description(self):
         return (
             f"Halloo! I'm {self.name}, a {self.size} ukulele from {self.origin}, "
-            f"crafted by {self.brand}. I'm part of the {self.instrument_type} group, "
-            f"and I bring smiles wherever I go!"
+            f"crafted by {self.brand}. I'm part of the {self.instrument_type} group!"
         )
 
     def joke(self):
@@ -199,7 +198,7 @@ def create_ukulele():
     origin = input("Where is your Ukulele from? (default: Hawaii): ") or "Hawaii"
     return Ukulele(name, brand=brand, size=size, origin=origin)
 
-def actions():
+def main():
     while True:
         menu()
         choice = input("🎼 Choose your instrument: ")
@@ -222,6 +221,11 @@ def actions():
         else:
             print("Oops! That was an invalid choice. Please try again!")
 
+        clear()
+
+    
+
+clear = lambda: os.system('cls' if os.name == 'nt' else 'clear')
 
 if __name__ == "__main__":
-    actions()
+    main()

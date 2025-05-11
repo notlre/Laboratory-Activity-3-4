@@ -29,6 +29,7 @@ class Musical_Instrument(ABC):
     def description(self):
         pass
 
+
 # Child Classes
 class Violin(Musical_Instrument):
     def __init__(self, name, instrument_type, brand):
@@ -75,7 +76,7 @@ class Guitar(Musical_Instrument):
             if guitar_type in ["acoustic", "electric", "neither"]:
                 return guitar_type
             else:
-                print("❗ Invalid choice. Please choose either Acoustic or Electric.")
+                print("❗ Invalid choice. Please choose from the available choices.")
 
     def play(self):
         if self.personality == "acoustic":
@@ -102,7 +103,6 @@ class Guitar(Musical_Instrument):
             return f"{self.name} screams with a deafening tone. \"Sup lads! The name's Marcin! From the {self.instrument_type} group!\""
         else:
             return f"{self.name} seems confused about its personality."
-
 
 class Ukulele(Musical_Instrument):
     def __init__(self, name, instrument_type="chordophone", brand="Generic", size="soprano"):
@@ -184,7 +184,7 @@ def create_guitar():
     Marcin_brand = input("Enter Marcin's brand (default: Generic): ") or "Generic"
     return Marcin_brand
     
-
+    
 def main():
     while True:
         menu()

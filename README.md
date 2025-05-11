@@ -11,7 +11,8 @@ Team Members:
 
 System Overview:
     This is a simple Object-Oriented Programming project that shows 4 different musical instruments and their types as well as their personalities. 
-It enables the user to create an instrument, name it, and use different methods or functions. The description() function shows the simple introduction of the instrument. The tune() function shows the instrument is being tuned. The play() function makes the instrument print a sound that it makes. 
+It enables the user to create an instrument, name it, and use different methods or functions. The description() function shows the simple introduction of the instrument. 
+The tune() function shows the instrument is being tuned. The play() function makes the instrument print a sound that it makes. 
 
 How to run:
     1. Choose any instrument out of the 4 available instruments.

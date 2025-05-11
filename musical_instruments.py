@@ -105,10 +105,9 @@ class Guitar(Musical_Instrument):
 
 
 class Ukulele(Musical_Instrument):
-    def __init__(self, name, instrument_type="chordophone", brand="Generic", size="soprano", origin="Hawaii"):
+    def __init__(self, name, instrument_type="chordophone", brand="Generic", size="soprano"):
         super().__init__(name, instrument_type, brand)
         self.size = size
-        self.origin = origin
         self.moods = ["sunny", "bubbly", "laid-back", "playful"]
 
     def play(self):
@@ -130,25 +129,9 @@ class Ukulele(Musical_Instrument):
 
     def description(self):
         return (
-            f"Halloo! I'm {self.name}, a {self.size} ukulele from {self.origin}, "
+            f"Halloo! I'm {self.name}, a {self.size} ukulele! "
             f"crafted by {self.brand}. I'm part of the {self.instrument_type} group!"
         )
-
-    def joke(self):
-        jokes = [
-            "Why did the ukulele bring sunscreen? Because it’s always in a sunny mood!",
-            "How do you make a band instantly happier? Add a ukulele!",
-            "Why did the ukulele get promoted? It always hits the right note!"
-        ]
-        return f"{self.name} giggles and says: \"{random.choice(jokes)}\""
-
-    def vibe(self):
-        vibes = [
-            "You're chillin' on a hammock, sipping coconut juice...",
-            "A summer breeze flows by as I strum gently...",
-            "Close your eyes... feel the island rhythm, yeah?"
-        ]
-        return f"{self.name} says: \"{random.choice(vibes)}\""
 
     
 
@@ -195,8 +178,7 @@ def create_ukulele():
     name = input("Enter a name for your Ukulele: ")
     size = input("Enter the Ukulele's size (default: soprano): ") or "soprano"
     brand = input("Enter the Ukulele's brand (default: Generic): ") or "Generic"
-    origin = input("Where is your Ukulele from? (default: Hawaii): ") or "Hawaii"
-    return Ukulele(name, brand=brand, size=size, origin=origin)
+    return Ukulele(name, brand=brand, size=size)
 
 def main():
     while True:

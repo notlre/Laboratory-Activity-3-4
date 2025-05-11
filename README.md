@@ -16,7 +16,7 @@ It enables the user to create an instrument, name it, and use different methods 
 How to run:
     1. Choose any instrument out of the 4 available instruments.
     2. You'd be given options depending on what instrument you chose.
-        2.1 Guitar lets you pick if its an Acoustic or Electric
+        2.1 Guitar lets you choose whether it is an Acoustic, Electric, or neither.
         2.2 The other three instruments gives you an option to name your instrument and other details.
     3. You can now choose what function to use; introduce, tune, play, and stop.
 

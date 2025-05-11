@@ -45,8 +45,6 @@ class Violin(Musical_Instrument):
         return f"{self.name} is a beautiful {self.type} instrument by {self.brand}. It uses a {self.bow_type} bow."
         
     
-    
-
 class Guitar(Musical_Instrument):
     def __init__(self, name = "Marcin the Guitar", type = "null"):
         super().__init__(name, type)
@@ -126,12 +124,11 @@ def actions():
 if __name__ == "__main__":
     actions()
     
-    
-
-
-
 
 class Flute(Musical_Instrument):
+    def __init__(self, name, type, brand):
+        super().__init__(name, type)
+        self.brand = brand
 
     def play_sound(self):
         print(f"{self.name} is producing a soft, airy sound.")

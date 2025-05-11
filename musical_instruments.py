@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 import random
 
 # Abstract Base Class (Parent)
-class Musical_Instrument:
+class Musical_Instrument(ABC):
 
     def __init__(self, name, type):
         self._name = name
@@ -27,6 +27,24 @@ class Musical_Instrument:
     @abstractmethod
     def description(self):
         pass
+      
+
+class Violin(Musical_Instrument):
+    def __init__(self, name, instrument_type, brand):
+        super().__init__(name, instrument_type)
+        self.brand = brand
+        self.bow_type = "standard"
+
+    def play(self):
+        print(f"{self.name} is playing a soft classical melody.")
+
+    def tune(self):
+        print(f"Tuning the strings of {self.name}")
+     
+    def description(self):
+        return f"{self.name} is a beautiful {self.type} instrument by {self.brand}. It uses a {self.bow_type} bow."
+        
+    
     
 
 class Guitar(Musical_Instrument):
@@ -104,5 +122,11 @@ def actions():
         else:
             print("Oops! That was an invalid choice. Please try again!")
 
+
 if __name__ == "__main__":
     actions()
+    
+    
+
+
+

@@ -30,6 +30,7 @@ class Musical_Instrument(ABC):
         pass
 
 
+# Child Classes
 class Violin(Musical_Instrument):
     def __init__(self, name, instrument_type, brand):
         super().__init__(name, "chordophone", brand)
@@ -64,45 +65,44 @@ class Flute(Musical_Instrument):
 
 
 class Guitar(Musical_Instrument):
-    def __init__(self, name="Marcin the Guitar", instrument_type="chordophone", type="null", brand="Generic"):
+    def __init__(self, name="Marcin the Guitar", instrument_type="chordophone", personality="null", brand="Generic"):
         super().__init__(name, instrument_type, brand)
-        self._type = type
+        self.personality = personality
 
     @staticmethod
     def choose_guitar_personality():
         while True:
-            guitar_type = input("Choose Marcin's Personality (Acoustic/Electric): ").lower()
-            if guitar_type in ["acoustic", "electric"]:
+            guitar_type = input("Choose Marcin's Personality (Acoustic/Electric/Neither): ").lower()
+            if guitar_type in ["acoustic", "electric", "neither"]:
                 return guitar_type
             else:
-                print("❗ Invalid choice. Please choose either Acoustic or Electric.")
+                print("❗ Invalid choice. Please choose from the available choices.")
 
     def play(self):
-        if self._type == "acoustic":
+        if self.personality == "acoustic":
             playstyles = ["a sweet country melody", "a mellow chord progression", "a warm, soft strum"]
             return f"{self.name} plays {random.choice(playstyles)}."
-        elif self._type == "electric":
+        elif self.personality == "electric":
             playstyles = ["an out of this world riff", "a fiery, screaming solo", "a sizzling fingerslick"]
             return f"{self.name} shreds {random.choice(playstyles)}."
         else:
             return f"{self.name} strums something unusual."
 
     def tune(self):
-        if self._type == "acoustic":
+        if self.personality == "acoustic":
             return f"{self.name} stays steadily as you tune its 6 strings."
-        elif self._type == "electric":
+        elif self.personality == "electric":
             return f"{self.name} flails everywhere as you tune its 6 strings."
         else:
             return f"{self.name} makes weird noises as you tune it."
 
     def description(self):
-        if self._type == "acoustic":
+        if self.personality == "acoustic":
             return f"{self.name} sings with a warm tone. \"Hello, I am Marcin the Guitar! From the {self.instrument_type} group!\""
-        elif self._type == "electric":
+        elif self.personality == "electric":
             return f"{self.name} screams with a deafening tone. \"Sup lads! The name's Marcin! From the {self.instrument_type} group!\""
         else:
             return f"{self.name} seems confused about its personality."
-
 
 class Ukulele(Musical_Instrument):
     def __init__(self, name, instrument_type="chordophone", brand="Generic", size="soprano"):
@@ -180,13 +180,19 @@ def create_ukulele():
     brand = input("Enter the Ukulele's brand (default: Generic): ") or "Generic"
     return Ukulele(name, brand=brand, size=size)
 
+def create_guitar():
+    Marcin_brand = input("Enter Marcin's brand (default: Generic): ") or "Generic"
+    return Marcin_brand
+    
+    
 def main():
     while True:
         menu()
         choice = input("🎼 Choose your instrument: ")
         if choice == "1":
-            guitar_type = Guitar.choose_guitar_personality()
-            guitar = Guitar("Marcin the Guitar", "chordophone", guitar_type)
+            brand = create_guitar()
+            personality = Guitar.choose_guitar_personality()
+            guitar = Guitar("Marcin the Guitar", "chordophone", personality, brand)
             interact(guitar)
         elif choice == "2":
             violin = create_violin()

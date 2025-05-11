@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-# Abstract Base Class (Parent)
 class Musical_Instrument:
     def __init__(self, name, instrument_type, brand):
         self.name = name
@@ -14,7 +13,6 @@ class Musical_Instrument:
     def tune(self):
         pass
 
-# Child Class
 class Guitar(Musical_Instrument):
     
     def play_sound(self):
